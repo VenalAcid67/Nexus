@@ -6,8 +6,12 @@ export interface ChatMessage {
   content: string;
 }
 
-export async function sendMessage(model: string, messages: ChatMessage[]): Promise<string> {
-  return await invoke("send_message", { model, messages });
+export async function sendMessage(
+	provider: string,
+	model: string, messages: ChatMessage[],
+	apiKey?: string
+): Promise<string> {
+  return await invoke("send_message", { provider, model, apiKey, messages });
 }
 
 export function onChatChunk(callback: (chunk: string) => void): Promise<UnlistenFn> {
