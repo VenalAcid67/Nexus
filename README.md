@@ -1,7 +1,32 @@
-# Tauri + SvelteKit + TypeScript
+# Nexus - Your Personal Assistant
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
+Nexus is an always active AI assistant that helps you on the go.
 
-## Recommended IDE Setup
+## Nexus Development Stack
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+- [VS Code](https://code.visualstudio.com/)
+
+- [Svelte](https://svelte.dev/)
+
+- [Tauri](https://tauri.app/)
+
+- [Rust](https://rust-lang.org/)
+
+## Instructions to Run
+
+### Prequisites
+
+- [NodeJS](https://nodejs.org/)
+
+- [pnpm](https://pnpm.io/) or any other node package manager that supports tauri
+
+- [Ollama](https://ollama.com)
+
+### Setup
+
+1. Clone Nexus from [GitHub](https://github.com/VenalAcid67/Nexus.git) in your local machine.
+- `git clone https://github.com/VenalAcid67/Nexus.git` 
+2. Install Llama3.2 in Ollama
+- `ollama pull llama3.2`
+3. Inside Nexus root, run:
+- `pnpm tauri dev`
