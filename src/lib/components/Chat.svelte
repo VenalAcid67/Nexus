@@ -27,7 +27,7 @@
     sending = true;
 
     try {
-      await sendMessage("llama3.2", messages.slice(0, -1));
+      await sendMessage("ollama", "llama3.2", messages.slice(0, -1));
     } catch (err) {
       messages[messages.length - 1].content = `Error: ${err}`;
       messages = [...messages];
