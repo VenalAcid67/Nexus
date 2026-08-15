@@ -3,7 +3,7 @@ use futures_util::StreamExt;
 use serde::{Deserialize, Serialize};
 use tauri::{AppHandle, Emitter};
 
-use super::provider_client::{ChatMessage, ChatProvider};
+use crate::orchestration::provider_client::{ChatMessage, ChatProvider};
 
 pub struct AnthropicProvider {
     api_key: String,

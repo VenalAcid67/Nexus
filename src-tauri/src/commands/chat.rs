@@ -1,4 +1,5 @@
-use tauri::{AppHandle, Emitter};
+use tauri::AppHandle;
+use crate::orchestration::provider_client::{get_provider, ChatMessage};
 
 #[tauri::command]
 pub async fn send_message(
