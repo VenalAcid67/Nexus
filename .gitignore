@@ -1,10 +1,37 @@
-.DS_Store
-node_modules
-/build
-/.svelte-kit
-/package
+# Dependencies
+**/node_modules/
+
+# SvelteKit build artifacts
+.svelte-kit/
+**/build/
+
+# Vite
+.vite/
+.vite.config.js.timestamp-*
+.vite.config.ts.timestamp-*
+# Rust / Tauri build output
+src-tauri/target/
+
+# Tauri generated files (regenerated on build, not needed in git)
+src-tauri/gen/
+
+# Environment / secrets — critical given today's API key work
 .env
+.env.local
+.env.*.local
 .env.*
 !.env.example
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
