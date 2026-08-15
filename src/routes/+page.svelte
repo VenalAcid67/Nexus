@@ -1,19 +1,10 @@
 <script lang="ts">
-  import { ping } from "$lib/tauri-api";
-
-  let result = "";
-
-  async function handlePing() {
-    result = await ping();
-  }
+  import Chat from "$lib/components/Chat.svelte";
 </script>
 
 <main class="container">
   <h1>Nexus</h1>
-   <button on:click={handlePing}>Ping</button>
-    {#if result}
-      <p>{result}</p>
-    {/if}
+  <Chat />
 </main>
 
 <style>
@@ -21,10 +12,10 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
     gap: 1rem;
   }
 </style>
